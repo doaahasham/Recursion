@@ -11,21 +11,21 @@ void printStars(int N) {
     cout << "*";
     printStars(N - 1);
 }
-void printPyramid(int N, int rows = 1) {
+void printInvertedPyramid(int N, int rows = 1) {
     if (rows > N) return;
 
-    printSpaces(rows);
-    printStars(2*N*rows - 1);
+    if (rows > 1) printSpaces(rows - 1);
+    printStars(2*(N-rows+1) - 1);
     cout << endl;
 
-    printPyramid(N, rows - 1);
+    printInvertedPyramid(N, rows + 1);
 }
 
 int main() {
     int N;
     cin >> N;
 
-    printPyramid(N);
+    printInvertedPyramid(N);
 
     return 0;
 }
