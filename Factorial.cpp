@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void Factorial(long long N , long long sum){
+void MaxNumber(long long N , long long sum){
     if(N==0 || N==1)
     {
         cout<<sum;
